@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+Options +MultiViews
+RewriteEngine On
+
+# NEW
+RewriteCond %{HTTP_HOST} ^(cliffcanan\.com)(:80)? [NC]
+RewriteRule ^(.*) http://www.cliffcanan.com/$1 [R=301,L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+DirectoryIndex index.html       
+order deny,allow
+
+# OLD SAMPLE CODE
+#RewriteBase /
+
+#RewriteCond %{HTTP_HOST} ^nooch\.com [NC] 
+#RewriteRule ^(.*)$ https://www.nooch.com/$1 [L,R=301]
+#RewriteRule ^nooch-for-landlords/? landlordlandingpage/index.html [NC]
+
+#RewriteRule ^rentscene/? landlordlandingpage/index.html [NC]
+
+#RewriteRule ^index\.php$ - [L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule . /index.php [L]
+</IfModule>
