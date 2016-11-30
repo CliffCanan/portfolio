@@ -1,4 +1,7 @@
 .htaccess
+*.bak
 *.pdf
+*.ppt
+*.pptx
 
 assets/videos/
