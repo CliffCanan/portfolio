@@ -2,7 +2,6 @@ $(document).ready(function () {
 
 
     particlesJS('home',
-
       {
           "particles": {
               "number": {
@@ -208,6 +207,8 @@ $(document).ready(function () {
         });
     }, { offset: '80%' });
 
+    $('.highlight').css({ color: defaultColor });
+
     /* Project thumbs - Masonry */
     $(window).load(function () {
 
@@ -355,7 +356,8 @@ $(document).ready(function () {
     });
 
     /*  Tooltips  */
-    $("[data-toggle='tooltip']").tooltip();
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();
 
     /*  Placeholder Detection  */
     if (!Modernizr.input.placeholder)

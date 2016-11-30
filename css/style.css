@@ -275,6 +275,89 @@
     z-index: 99;
 }
 
+p.sub-head {
+    color: #888;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.45;
+    margin-bottom: 0;
+}
+
+    p.sub-head a.dark {
+        color: #555;
+    }
+
+p, p * {
+    -webkit-transition: .3s color ease-in-out;
+    -moz-transition: .3s color ease-in-out;
+    transition: .3s color ease-in-out;
+}
+
+    p a:hover {
+        text-decoration: none;
+    }
+
+.hov-highlight-bl:hover {
+    color: #38A5DB;
+}
+
+.hov-highlight-gr:hover {
+    color: #21B799;
+}
+
+.hov-highlight-or:hover {
+    color: #F78F39;
+}
+
+.hov-highlight-rd:hover {
+    color: #F05557;
+}
+
+.hov-highlight-pk:hover {
+    color: #F1678D;
+}
+
+.hov-underline {
+    position: relative;
+}
+
+    .hov-underline::after {
+        background: #F05557;
+        content: "";
+        height: 2px;
+        left: 0;
+        bottom: 2px;
+        position: absolute;
+        width: 0%;
+        -webkit-transition: .3s all ease-in;
+        -moz-transition: .3s all ease-in;
+        transition: .3s all ease-in;
+    }
+
+    .hov-underline:hover::after {
+        width: 100%;
+    }
+
+    .hov-underline.u95:hover::after {
+        width: 95% !important;
+    }
+
+.emph {
+    font-size: 190%;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    line-height: 1.15;
+}
+
+    .emph.hov-underline::after {
+        height: 4px;
+        bottom: 0;
+    }
+
+    .emph:hover {
+        color: #333;
+    }
+
 .particles-js-canvas-el {
     position: absolute;
     top: 120px;
@@ -283,10 +366,42 @@
 }
 
 
-.chart {
-    margin: 34px 0 35px;
+.img-wrapper .on-hover {
+    top: 40%;
 }
 
+    .img-wrapper .on-hover .btn {
+        box-shadow: 0px 1px 3px -1px rgba(0,0,0,.2);
+    }
+
+        .img-wrapper .on-hover .btn::after {
+            border-radius: inherit;
+            box-shadow: 0px 6px 15px -3px rgba(0,0,0,.45);
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            -webkit-transition: opacity .4s ease;
+            -moz-transition: opacity .4s ease;
+            transition: opacity .4s ease;
+        }
+
+
+
+.img-wrapper:hover .on-hover .btn::after {
+    opacity: 1;
+}
+
+.max-760 {
+    max-width: 760px;
+}
+
+
+/***  SKILLS  ***/
 .skills {
     margin-top: 20px;
 }
@@ -295,6 +410,23 @@
         margin-bottom: 55px;
     }
 
+.percent {
+    line-height: 130px;
+    opacity: .7;
+    -webkit-transition: .2s all ease-in-out;
+    -moz-transition: .2s all ease-in-out;
+    transition: .2s all ease-in-out;
+}
+
+.chart {
+    margin: 34px 0 35px;
+}
+
+    .chart:hover .percent {
+        font-size: 50px;
+        font-weight: 600;
+        opacity: 1;
+    }
 
 /*** ABOUT  ***/
 #about img {
@@ -302,6 +434,30 @@
     border: 10px solid transparent;
     box-shadow: 8px 4px 0 rgba(225,225,225,.25);
 }
+
+
+/***  CONTACT  ***/
+#contact-form .field-wrap {
+    display: block;
+    margin-bottom: 40px;
+}
+
+    #contact-form .field-wrap .error-message {
+        text-align: left;
+        top: 46px;
+        left: 15px;
+        font-size: 15px;
+    }
+
+.bl_form input, .bl_form textarea {
+    max-width: 100%;
+    width: 100%;
+}
+
+.lb_wrap .lb_label.top {
+    top: -4px !important;
+}
+
 
 /***  FOOTER  ***/
 .copyright {
@@ -315,3 +471,39 @@
         color: #ddd;
         text-decoration: none;
     }
+
+
+@media (min-width: 992px) {
+    .img-wrapper img {
+        box-shadow: 0 12px 35px -2px rgba(0,0,0,.45);
+    }
+
+    .bl_form input, .bl_form textarea {
+        border-radius: 30px;
+        font-size: 22px;
+        padding: 15px 25px;
+    }
+
+    .bl_form input {
+        height: 60px;
+        max-height: 60px;
+    }
+
+    .bl_form textarea {
+        height: initial;
+        max-height: none;
+    }
+
+    .lb_wrap .lb_label.top {
+        top: -14px !important;
+    }
+
+    .lb_wrap textarea + .lb_label.top {
+        top: -44px !important;
+    }
+
+    #contact-form .field-wrap .error-message {
+        top: initial;
+        font-size: 16.5px;
+    }
+}

@@ -55,7 +55,7 @@ if(isset($_POST['submitted'])) {
 		
 		mail($email, $respondSubject, $respondBody, $respondHeaders);
 		
-        // set our boolean completion value to TRUE
+    // set our boolean completion value to TRUE
 		$emailSent = true;
 	}
 }
