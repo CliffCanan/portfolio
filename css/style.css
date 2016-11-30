@@ -287,9 +287,13 @@
     margin: 34px 0 35px;
 }
 
-.skills h2 {
-    margin-bottom: 55px;
+.skills {
+    margin-top: 20px;
 }
+
+    .skills h2 {
+        margin-bottom: 55px;
+    }
 
 
 /*** ABOUT  ***/

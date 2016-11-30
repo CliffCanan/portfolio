@@ -1,6 +1,6 @@
 <?php 
-$emailTo = 'yourmail@example.com';
-$siteTitle = 'YourSiteTitle';
+$emailTo = 'cliff.canan@gmail.com';
+$siteTitle = 'Cliff Canan Portfolio';
 
 error_reporting(E_ALL ^ E_NOTICE); // hide all basic notices from PHP
 
@@ -17,10 +17,10 @@ if(isset($_POST['submitted'])) {
 	
 	// need valid email
 	if(trim($_POST['email']) === '')  {
-		$emailError = 'Forgot to enter in your e-mail address.';
+		$emailError = 'Please enter your e-mail address.';
 		$hasError = true;
 	} else if (!preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim($_POST['email']))) {
-		$emailError = 'You entered an invalid email address.';
+		$emailError = 'Please enter a valid email address.';
 		$hasError = true;
 	} else {
 		$email = trim($_POST['email']);
@@ -48,9 +48,9 @@ if(isset($_POST['submitted'])) {
 
 		mail($emailTo, $subject, $body, $headers);
 		
-        //Autorespond
+    //Autorespond
 		$respondSubject = 'Thank you for contacting '.$siteTitle;
-		$respondBody = "Your message to $siteTitle has been delivered! \n\nWe will answer back as soon as possible.";
+		$respondBody = "Your message to Cliff Canan has been delivered successfully!";
 		$respondHeaders = 'From: ' .' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $emailTo;
 		
 		mail($email, $respondSubject, $respondBody, $respondHeaders);
