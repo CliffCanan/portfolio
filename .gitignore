@@ -1,1 +1,4 @@
 .htaccess
+*.pdf
+
+assets/videos/
