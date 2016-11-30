@@ -165,17 +165,45 @@ $(document).ready(function () {
 
     /* Skills Functions */
     var color = $('#home').css('backgroundColor');
+    var defaultColor = color;
 
     $('.skills').waypoint(function () {
         $('.chart').each(function () {
+            color = $(this).attr('data-color');
+            switch (color)
+            {
+                case 'red':
+                    color = '#F05557';
+                    break;
+                case 'lightred':
+                    color = '#f69b9c';
+                    break;
+                case 'blue':
+                    color = '#38A5DB';
+                    break;
+                case 'lightblue':
+                    color = '#79c2e7';
+                    break;
+                case 'green':
+                    color = '#21B799';
+                    break;
+                case 'lightgreen':
+                    color = '#47dec0';
+                    break;
+                case 'orange':
+                    color = '#F78F39';
+                    break;
+                default:
+                    color = defaultColor;
+            }
+
             $(this).easyPieChart({
-                size: 140,
+                size: 136,
                 animate: 2000,
-                lineCap: 'butt',
                 scaleColor: false,
                 barColor: color,
                 trackColor: 'transparent',
-                lineWidth: 10
+                lineWidth: 12
             });
         });
     }, { offset: '80%' });

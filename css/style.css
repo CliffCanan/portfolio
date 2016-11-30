@@ -66,6 +66,10 @@
     padding-top: 45px !important;
 }
 
+.p-t-80 {
+    padding-top: 80px !important;
+}
+
 .p-l-0 {
     padding-left: 0px !important;
 }
@@ -278,6 +282,22 @@
     z-index: 1;
 }
 
+
+.chart {
+    margin: 34px 0 35px;
+}
+
+.skills h2 {
+    margin-bottom: 55px;
+}
+
+
+/*** ABOUT  ***/
+#about img {
+    max-width: 250px;
+    border: 10px solid transparent;
+    box-shadow: 8px 4px 0 rgba(225,225,225,.25);
+}
 
 /***  FOOTER  ***/
 .copyright {
