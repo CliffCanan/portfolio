@@ -123,8 +123,8 @@ $(document).ready(function () {
 
     $("#text-scroll").typed({
         strings: ["a self-taught coder", "web/mobile app developer", "an entrepreneur", "a fintech entrepreneur"],
-        typeSpeed: 30,
-        backSpeed: 20, // backspacing speed
+        typeSpeed: 25,
+        backSpeed: 10, // backspacing speed
         backDelay: 2000, // time before backspacing
         loop: true, // loop
         loopCount: 3, // false = infinite
@@ -250,6 +250,27 @@ $(document).ready(function () {
 
         scrollSpyRefresh();
         waypointsRefresh();
+    });
+
+
+    /* Awards Carousel */
+    $('#carousel').carouFredSel({
+        width: '100%',
+        items: {
+            visible: 'odd+2'
+        },
+        scroll: {
+            pauseOnHover: true,
+            onBefore: function () {
+                $(this).children().removeClass('hover');
+            }
+        },
+        auto: {
+            items: 1,
+            easing: 'linear',
+            duration: 3500,
+            timeoutDuration: 0
+        }
     });
 
     /* Filter Projects */
