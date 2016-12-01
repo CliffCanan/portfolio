@@ -166,8 +166,11 @@ $(document).ready(function () {
     var color = $('#home').css('backgroundColor');
     var defaultColor = color;
 
+    var animateDuration = 1100;
+
     $('.skills').waypoint(function () {
         $('.chart').each(function () {
+
             color = $(this).attr('data-color');
             switch (color)
             {
@@ -198,12 +201,15 @@ $(document).ready(function () {
 
             $(this).easyPieChart({
                 size: 136,
-                animate: 2000,
+                animate: animateDuration,
                 scaleColor: false,
                 barColor: color,
                 trackColor: 'transparent',
-                lineWidth: 12
+                lineWidth: 14
             });
+
+            if (animateDuration < 3600)
+                animateDuration += 250;
         });
     }, { offset: '80%' });
 
