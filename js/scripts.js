@@ -121,6 +121,15 @@ $(document).ready(function () {
 
     );
 
+    $("#text-scroll").typed({
+        strings: ["a self-taught coder", "web/mobile app developer", "an entrepreneur", "a fintech entrepreneur"],
+        typeSpeed: 30,
+        backSpeed: 20, // backspacing speed
+        backDelay: 2000, // time before backspacing
+        loop: true, // loop
+        loopCount: 3, // false = infinite
+    });
+
     /*  Navigation Functions */
     if ($(window).scrollTop() === 0)
         $('#main-nav').removeClass('scrolled');
@@ -148,8 +157,8 @@ $(document).ready(function () {
         smoothHeight: false
     });
 
-    $("#home .text-col h1").fitText(0.95, { minFontSize: '38px', maxFontSize: '57px' });
-    $("#home .text-col p").fitText(1.9, { minFontSize: '18px', maxFontSize: '26px' });
+    $("#home .text-col h1").fitText(1, { minFontSize: '38px', maxFontSize: '57px' });
+    $("#home .text-col p").fitText(1, { minFontSize: '18px', maxFontSize: '30px' });
 
     if ($('#home .imac-screen').length)
     {
