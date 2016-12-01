@@ -186,6 +186,10 @@
     margin-top: 30px !important;
 }
 
+.m-t-40 {
+    margin-top: 40px !important;
+}
+
 .m-r-0 {
     margin-right: 0px !important;
 }
@@ -350,7 +354,7 @@ p, p * {
     font-size: 190%;
     letter-spacing: 1px;
     font-weight: bolder;
-    line-height: 1.15;
+    line-height: 1.35;
 }
 
     .emph.hov-underline::after {
@@ -359,7 +363,7 @@ p, p * {
     }
 
     .emph:hover {
-        color: #333;
+        color: #444;
     }
 
 .particles-js-canvas-el {
@@ -594,9 +598,10 @@ img#bootstrap {
 
 /*** ABOUT  ***/
 #about img {
-    max-width: 250px;
     border: 10px solid transparent;
-    box-shadow: 8px 4px 0 rgba(225,225,225,.25);
+    box-shadow: 6px 0px 0px 7px rgba(155,155,155,0.15), -7px 0px 0px 7px rgba(185,185,185,0.12);
+    margin-bottom: 10px;
+    max-width: 230px;
 }
 
 
@@ -707,11 +712,12 @@ img#bootstrap {
 
 @media (min-width: 992px) {
     .img-wrapper img {
-        box-shadow: 0 12px 35px -2px rgba(0,0,0,.45);
+        box-shadow: 0 12px 40px -3px rgba(33,31,30,.4);
     }
 
     p.sub-head {
-        font-size: 25px;
+        font-size: 24px;
+        padding: 0 50px;
     }
 
     .chart {
