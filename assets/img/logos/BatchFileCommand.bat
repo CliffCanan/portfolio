@@ -1,0 +1,1 @@
+forfiles /m *.png /c "cmd /c pngout.exe @file"

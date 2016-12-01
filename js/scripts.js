@@ -165,12 +165,13 @@ $(document).ready(function () {
     /* Skills Functions */
     var color = $('#home').css('backgroundColor');
     var defaultColor = color;
-
     var animateDuration = 1100;
 
-    $('.skills').waypoint(function () {
-        $('.chart').each(function () {
+    var percent = 0;
 
+    $('.skills').waypoint(function () {
+
+        $('.chart').each(function () {
             color = $(this).attr('data-color');
             switch (color)
             {
@@ -211,6 +212,15 @@ $(document).ready(function () {
             if (animateDuration < 3600)
                 animateDuration += 250;
         });
+
+
+        $('.skills-percent').each(function () {
+            percent = $(this).attr('data-percent');
+            $(this).animate({
+                    width: percent + '%'
+                }, 500);
+        });
+
     }, { offset: '80%' });
 
     $('.highlight').css({ color: defaultColor });
