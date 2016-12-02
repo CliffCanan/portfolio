@@ -1035,14 +1035,14 @@ a {
 /*----------------------
 -----Dribbble Styles----
 ------------------------*/
-.awards-button {
+.awards-title {
     display: block;
     text-align: center;
     text-transform: uppercase;
     margin: 0;
 }
 
-    .awards-button a {
+    .awards-title span {
         display: block;
         color: #fff;
         background: #F05557;
