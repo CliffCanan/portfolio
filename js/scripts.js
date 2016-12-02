@@ -295,9 +295,8 @@ $(document).ready(function () {
     twitterFetcher.fetch(configTweets);
 
     function handleTweets(tweets) {
-        console.log("Twitter Callback - Tweets Received: [" + tweets.length + "]");
-
-        console.log(JSON.stringify(tweets));
+        //console.log("Twitter Callback - Tweets Received: [" + tweets.length + "]");
+        //console.log(JSON.stringify(tweets));
 
         var x = tweets.length,
 			n = 0,
@@ -408,7 +407,7 @@ $(document).ready(function () {
                 $('.screen.flexslider').flexslider({
                     prevText: '<i class="fa fa-angle-left"></i>',
                     nextText: '<i class="fa fa-angle-right"></i>',
-                    slideshowSpeed: 3000,
+                    slideshowSpeed: 4000,
                     animation: 'slide',
                     controlNav: false,
                     pauseOnAction: false,
