@@ -122,11 +122,11 @@ $(document).ready(function () {
     );
 
     $("#text-scroll").typed({
-        strings: ["a self-taught coder", "web/mobile app developer", "an entrepreneur", "a fintech entrepreneur"],
-        typeSpeed: 25,
-        backSpeed: 10, // backspacing speed
-        backDelay: 2000, // time before backspacing
-        loop: true, // loop
+        strings: [" self-taught coder", " front-end developer", " web/mobile app developer", "n entrepreneur", " fintech entrepreneur", " resilient, scrappy startup vet"],
+        typeSpeed: 18,
+        backSpeed: 6, // backspacing speed
+        backDelay: 2250, // time before backspacing
+        loop: true,
         loopCount: 3, // false = infinite
     });
 
@@ -295,8 +295,6 @@ $(document).ready(function () {
     twitterFetcher.fetch(configTweets);
 
     function handleTweets(tweets) {
-        //console.log("Twitter Callback - Tweets Received: [" + tweets.length + "]");
-        //console.log(JSON.stringify(tweets));
 
         var x = tweets.length,
 			n = 0,

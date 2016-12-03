@@ -439,10 +439,6 @@ p, p * {
     opacity: 1;
 }
 
-.max-760 {
-    max-width: 760px;
-}
-
 
 .skills .nav-tabs > li > a {
     border: 2px solid #bbb !important;
@@ -452,20 +448,28 @@ p, p * {
     font-weight: 400;
     width: 50%;
     margin: 0 auto;
-    -webkit-transition: all .18s ease;
-    -moz-transition: all .18s ease;
-    transition: all .18s ease;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
 }
 
+    .skills .nav-tabs > li > a:hover {
+        color: #3a3c4a;
+        background: #fafafa;
+    }
+
 .skills .nav-tabs > li.active > a {
+    background: #fff !important;
     color: #3a3c4a;
     font-weight: 600;
 }
 
+.skills .nav-tabs > li:first-child > a:hover,
 .skills .nav-tabs > li:first-child.active > a {
     border: 2px solid #F05557 !important;
 }
 
+.skills .nav-tabs > li:last-child > a:hover,
 .skills .nav-tabs > li:last-child.active > a {
     border: 2px solid #38A5DB !important;
 }
@@ -568,6 +572,12 @@ img#bootstrap {
     max-width: 150px;
 }
 
+.skills-percent {
+    position: absolute;
+    width: 0%;
+    height: 12px;
+}
+
 .skills-wrapper {
     position: relative;
     overflow: hidden;
@@ -594,27 +604,12 @@ img#bootstrap {
         }
 
     .skills-wrapper.red {
-        border-color: #e53b51;
+        border-color: #F05557;
     }
 
         .skills-wrapper.red .skills-percent {
-            background-color: #e53b51;
+            background-color: #F05557;
         }
-
-.skills-percent {
-    position: absolute;
-    width: 0%;
-    height: 12px;
-    background-color: #eeac02;
-}
-
-    .skills-percent.blue {
-        background-color: #3cb5b5;
-    }
-
-    .skills-percent.red {
-        background-color: #e53b51;
-    }
 
 .skills-name {
     margin-bottom: 5px;
@@ -934,8 +929,31 @@ img#bootstrap {
         text-decoration: none;
     }
 
+@media (max-width: 767px) {
+    #home.jumbotron p {
+        min-height: 84px;
+    }
+
+    #skills .nav-tabs.nav-justified > li {
+        display: inline-block;
+        margin-bottom: 10px;
+        width: 49%;
+    }
+
+        #skills .nav-tabs.nav-justified > li a {
+            width: 100%;
+        }
+
+        #skills .nav-tabs.nav-justified > li:last-child {
+            float: right;
+        }
+}
 
 @media (min-width: 992px) {
+    .max-760 {
+        max-width: 760px;
+    }
+
     #main-nav #logo {
         border-radius: 50%;
         border: 3px solid #fff;
