@@ -386,12 +386,12 @@ $(document).ready(function () {
             if (elemDataCont.data('tags'))
             {
                 var tagsArr = elemDataCont.data('tags').split(',');
-                var html = "";
+                var html = "<div>";
                 for (var i = 0; i < tagsArr.length; i++)
                 {
-                    console.log(tagsArr[i]);
-                    html += "<span>" + tagsArr[i] + "</span>";
+                    html += "<div>" + tagsArr[i] + "</div>";
                 }
+                html += "</div>";
                 $(this).find('#sdbr-tags').show().html(html);
             }
             else
