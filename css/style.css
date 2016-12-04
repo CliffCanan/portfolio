@@ -772,6 +772,11 @@ img#bootstrap {
     margin-bottom: 10px;
 }
 
+img.limit-height {
+    width: 60% !important;
+    margin: 5px auto 0;
+}
+
 /***  AWARDS  ***/
 .carousel-container {
     background-color: #ccc;
@@ -1075,6 +1080,12 @@ img#bootstrap {
 
     #carousel div {
         width: 240px;
+    }
+
+    img.limit-height {
+        max-height: 380px;
+        width: initial !important;
+        margin: 15px auto 0;
     }
 
     .bl_form input, .bl_form textarea {

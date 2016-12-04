@@ -356,13 +356,17 @@ $(document).ready(function () {
 			title = elem.find('.project-title').text(),
 			descr = elem.find('.project-description').html(),
 			slidesHtml = '<ul class="slides">',
-			elemDataCont = elem.find('.project-description');
+			elemDataCont = elem.find('.project-description'),
+            imgFlag = "";
+
+        if (title == "Nooch Mobile Refactor")
+            imgFlag = " class='limit-height'";
 
         slides = elem.find('.project-description').data('images').split(',');
 
         for (var i = 0; i < slides.length; ++i)
         {
-            slidesHtml = slidesHtml + '<li><img src=' + slides[i] + ' alt=""></li>';
+            slidesHtml = slidesHtml + '<li><img src=' + slides[i] + imgFlag + ' alt=""></li>';
         }
 
         slidesHtml = slidesHtml + '</ul>';
