@@ -298,6 +298,10 @@
     position: relative;
 }
 
+.p-abs {
+    position: absolute;
+}
+
 .hidden {
     display: none !important;
 }
@@ -331,10 +335,6 @@ p, p * {
     p a:hover {
         text-decoration: none;
     }
-
-.jumbotron p {
-    line-height: inherit;
-}
 
 .hov-highlight-bl:hover {
     color: #38A5DB;
@@ -404,6 +404,10 @@ p, p * {
     z-index: 1;
 }
 
+.jumbotron p {
+    line-height: inherit;
+}
+
 .jumbotron h1,
 .jumbotron p {
     text-shadow: 0 4px 1px rgba(0,0,0,.2);
@@ -433,6 +437,10 @@ p, p * {
             transition: opacity .4s ease;
         }
 
+#home.jumbotron .btn {
+    position: absolute;
+    z-index: 9;
+}
 
 
 .img-wrapper:hover .on-hover .btn::after {
@@ -440,6 +448,14 @@ p, p * {
 }
 
 
+
+/***  ABOUT  ***/
+.services .item .icon {
+    margin-bottom: 20px;
+}
+
+
+/***  SKILLS  ***/
 .skills .nav-tabs > li > a {
     border: 2px solid #bbb !important;
     border-radius: 60px;
@@ -474,13 +490,6 @@ p, p * {
     border: 2px solid #38A5DB !important;
 }
 
-
-/***  ABOUT  ***/
-.services .item .icon {
-    margin-bottom: 20px;
-}
-
-/***  SKILLS  ***/
 .skills {
     margin-top: 50px;
 }
@@ -703,12 +712,51 @@ img#bootstrap {
     border-color: #F78F39;
 }
 
+#projects-container .project-item {
+    background: #444;
+    background: -webkit-radial-gradient(#aaa, #666, #444);
+    background: -o-radial-gradient(#aaa, #666, #444);
+    background: -moz-radial-gradient(#aaa, #666, #444);
+    background: radial-gradient(#aaa, #666, #444);
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#sdbr-tags {
+    line-height: 1.5;
+    padding-left: 30px;
+    position: relative;
+    text-indent: -15px;
+    top: -2px;
+}
+
+    #sdbr-tags:before {
+        display: inline-block;
+        width: 0px;
+        content: "\f02c";
+        font-family: "Fontawesome";
+        margin-right: 15px;
+    }
+
+    #sdbr-tags span {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        color: #777;
+        font-size: 12.5px;
+        font-weight: 600;
+        line-height: 2;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        padding: 1px 8px;
+        white-space: normal;
+    }
+
 
 /***  AWARDS  ***/
 .carousel-container {
     background-color: #ccc;
     position: relative;
-    min-height: 180px;
+    min-height: 160px;
 }
 
 #wrapper {
@@ -978,6 +1026,7 @@ img#bootstrap {
         margin: 34px 0 35px;
     }
 
+    /***  SKILLS  ***/
     .skills h2 {
         margin-bottom: 55px;
     }
@@ -997,6 +1046,11 @@ img#bootstrap {
         max-width: 180px;
         margin: 0 6% 5px;
         width: initial;
+    }
+
+    /*** PORTFOLIO ***/
+    #projects-container .project-item {
+        padding: 20px;
     }
 
     #carousel div {

@@ -239,13 +239,13 @@ $(document).ready(function () {
 
         $('#projects-container').css({ visibility: 'visible' });
 
-        $('#projects-container').masonry({
+        var $portfolio = $('#projects-container').masonry({
             itemSelector: '.project-item:not(.filtered)',
-            columnWidth: 320,
+            columnWidth: 310,
             isFitWidth: true,
             isResizable: true,
             isAnimated: !Modernizr.csstransitions,
-            gutterWidth: 25
+            gutterWidth: 40,
         });
 
         scrollSpyRefresh();
@@ -382,6 +382,20 @@ $(document).ready(function () {
                 $(this).find('#sdbr-date').show().text(elemDataCont.data('date'))
             else
                 $(this).find('#sdbr-date').hide();
+
+            if (elemDataCont.data('tags'))
+            {
+                var tagsArr = elemDataCont.data('tags').split(',');
+                var html = "";
+                for (var i = 0; i < tagsArr.length; i++)
+                {
+                    console.log(tagsArr[i]);
+                    html += "<span>" + tagsArr[i] + "</span>";
+                }
+                $(this).find('#sdbr-tags').show().html(html);
+            }
+            else
+                $(this).find('#sdbr-tags').hide();
 
             if (elemDataCont.data('client'))
                 $(this).find('#sdbr-client').show().text(elemDataCont.data('client'))
