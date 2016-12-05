@@ -145,10 +145,10 @@ $(document).ready(function () {
 
     /*  Header Functions  */
     $('.imac-screen').flexslider({
-        prevText: '<i class="fa fa-angle-left"></i>',
-        nextText: '<i class="fa fa-angle-right"></i>',
+        //prevText: '<i class="fa fa-angle-left"></i>',
+        //nextText: '<i class="fa fa-angle-right"></i>',
         animation: 'slide',
-        slideshowSpeed: 3000,
+        slideshowSpeed: 4500,
         useCSS: true,
         controlNav: false,
         directionNav: false,
@@ -366,7 +366,10 @@ $(document).ready(function () {
 
         for (var i = 0; i < slides.length; ++i)
         {
-            slidesHtml = slidesHtml + '<li><img src=' + slides[i] + imgFlag + ' alt=""></li>';
+            if (slides[i].indexOf('youtube.com') > -1) // Videos
+                slidesHtml = '<iframe width="750" height="422" src="' + slides[i] + '" frameborder="0" allowfullscreen></iframe>';
+            else // Images
+                slidesHtml = slidesHtml + '<li><img src=' + slides[i] + imgFlag + ' alt=""></li>';
         }
 
         slidesHtml = slidesHtml + '</ul>';
