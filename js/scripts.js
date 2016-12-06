@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
     particlesJS('home',
       {
           "particles": {
@@ -451,7 +450,6 @@ $(document).ready(function () {
 			.flexslider('destroy');
     });
 
-
     /* 	ScrollTo Links  */
     $('a.scrollto').click(function (e) {
         $('html,body').scrollTo(this.hash, this.hash, {
@@ -519,3 +517,7 @@ $(document).ready(function () {
     }
 
 });
+
+function openFeaturedProject() {
+    $('#featured-proj').click();
+}
