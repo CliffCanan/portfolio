@@ -288,7 +288,8 @@ $(document).ready(function () {
         "showTime": true,
         "showRetweet": true,
         "showInteraction": true,
-        "showImages": true
+        "showImages": true,
+        "lang": 'en'
     };
 
     twitterFetcher.fetch(configTweets);

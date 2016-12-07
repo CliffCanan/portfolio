@@ -550,6 +550,11 @@ p, p * {
     transition: .2s all ease-in-out;
 }
 
+.easyPieChart .percent:after {
+    content: '';
+    margin: 0;
+}
+
 .chart {
     margin: 30px 0 20px;
 }
@@ -830,7 +835,7 @@ img#bootstrap {
     margin: 25px auto 30px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    padding: 5px
+    padding: 5px;
 }
 
 img.limit-height {
@@ -1029,11 +1034,16 @@ img.limit-height {
     text-decoration: none;
 }
 
-/*#twitter .flexslider .slides img {
+#twitter .flexslider .slides .media img {
     border-radius: 10px;
     max-width: 380px;
-}*/
+}
 
+#twitter #twitter-slider p.tweet > img {
+    display: inline;
+    max-width: 1.1em;
+    padding: 0 3px;
+}
 
 /***  CONTACT  ***/
 #contact-form .field-wrap {
