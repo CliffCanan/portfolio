@@ -302,6 +302,10 @@
     position: absolute;
 }
 
+.f-600 {
+    font-weight: 600 !important;
+}
+
 .hidden {
     display: none !important;
 }
