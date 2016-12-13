@@ -121,10 +121,10 @@ $(document).ready(function () {
     );
 
     $("#text-scroll").typed({
-        strings: [" self-taught coder", " front-end developer", " web/mobile app developer", "n entrepreneur", " fintech entrepreneur", " resilient, scrappy startup vet"],
-        typeSpeed: 18,
-        backSpeed: 6, // backspacing speed
-        backDelay: 2250, // time before backspacing
+        strings: [" perpetual learner", " mobile payments aficionado", " fintech entrepreneur", " self-taught coder", " front-end developer", " resilient, scrappy startup vet", " web/mobile app developer", "lways asking \"why?\""],
+        typeSpeed: 16,
+        backSpeed: 5, // backspacing speed
+        backDelay: 2300, // time before backspacing
         loop: true,
         loopCount: 3, // false = infinite
     });
