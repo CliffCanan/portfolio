@@ -761,7 +761,6 @@ img#bootstrap {
     background: radial-gradient(#aaa, #666, #444);
     padding: 0;
     border-radius: 10px;
-    width: 96%;
     max-width: 380px;
 }
 
@@ -1280,7 +1279,7 @@ img.limit-height {
 
     /*** PORTFOLIO ***/
     #projects-container .project-item {
-        /*padding: 20px;*/
+        min-width: 340px;
     }
 
     #carousel div {

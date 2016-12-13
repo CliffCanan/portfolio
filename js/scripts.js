@@ -240,11 +240,11 @@ $(document).ready(function () {
 
         var $portfolio = $('#projects-container').masonry({
             itemSelector: '.project-item:not(.filtered)',
-            columnWidth: 400,
-            fitWidth: true,
+            columnWidth: 375,
+            //fitWidth: true,
             isResizable: true,
             isAnimated: !Modernizr.csstransitions,
-            gutterWidth: 50,
+            gutterWidth: 20,
         });
 
         scrollSpyRefresh();
