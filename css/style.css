@@ -759,16 +759,103 @@ img#bootstrap {
     background: -o-radial-gradient(#aaa, #666, #444);
     background: -moz-radial-gradient(#aaa, #666, #444);
     background: radial-gradient(#aaa, #666, #444);
-    padding: 15px;
-    border-radius: 4px;
+    padding: 0;
+    border-radius: 10px;
+    width: 96%;
+    max-width: 380px;
 }
 
-
-.project-item p.category {
-    margin-top: 2px;
-    text-transform: none;
-    color: #888;
+.project-item img {
+    max-height: 318px;
+    margin: 0 auto;
+    -webkit-transform: scale(1);
+    transform: translateX(1);
+    -webkit-transition: all 3s ease-out;
+    transition: all 3s ease-out;
 }
+
+.project-item:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.project-item .hover-mask {
+    background: rgba(27,23,23,0);
+    -webkit-transform: none !important;
+    transform: none !important;
+    -webkit-transition: all .8s ease-in-out;
+    transition: all .8s ease-in-out;
+    padding-left: 0;
+}
+
+    .project-item .hover-mask:after {
+        content: "";
+    }
+
+    .project-item .hover-mask > div:after {
+        content: "\f138";
+        color: #fff;
+        display: block;
+        font-family: 'FontAwesome';
+        font-size: 24px;
+        position: absolute;
+        bottom: -50px;
+        width: 100%;
+        left: 0;
+        text-align: center;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s ease-in;
+        transition: opacity 0.35s ease-in;
+    }
+
+    .project-item .hover-mask .project-title {
+        background: rgba(240,85,87,.92);
+        font-size: 28px;
+        font-weight: 700;
+        text-shadow: 0 3px 8px rgba(0,0,0,.35);
+        margin-bottom: 10px;
+    }
+
+    .project-item .hover-mask > div {
+        position: absolute;
+        width: 100%;
+        bottom: -55px;
+        -webkit-transition: all .6s ease-out;
+        transition: all .6s ease-out;
+    }
+
+
+    .project-item .hover-mask p {
+        opacity: 0;
+        font-size: 20px;
+        line-height: 1.5;
+        text-shadow: 0 2px 4px rgba(0,0,0,.5);
+        -webkit-transition: all 0.35s ease-in;
+        transition: all 0.35s ease-in;
+    }
+
+        .project-item .hover-mask p.category {
+            color: #eee;
+            font-weight: 700;
+            margin-top: 2px;
+            text-transform: none;
+        }
+
+.project-item:hover .hover-mask {
+    background: rgba(27,23,23,.88);
+}
+
+    .project-item:hover .hover-mask > div {
+        bottom: 28%;
+    }
+
+    .project-item:hover .hover-mask p {
+        opacity: 1;
+    }
+
+    .project-item:hover .hover-mask > div:after {
+        opacity: 1;
+    }
 
 #sdbr-title {
     margin-bottom: 10px;
@@ -1193,7 +1280,7 @@ img.limit-height {
 
     /*** PORTFOLIO ***/
     #projects-container .project-item {
-        padding: 20px;
+        /*padding: 20px;*/
     }
 
     #carousel div {
@@ -1250,6 +1337,12 @@ img.limit-height {
     }
 }
 
+
+@media (min-width: 1200px) {
+    .break-lg {
+        display: block;
+    }
+}
 
 .typed-cursor {
     opacity: 1;
