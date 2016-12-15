@@ -357,9 +357,21 @@ $(document).ready(function () {
 			descr = elem.find('.project-description').html(),
 			slidesHtml = '<ul class="slides">',
 			elemDataCont = elem.find('.project-description'),
-            imgFlag = "";
+            imgFlag = "",
+            wideFlag = elemDataCont.data('wide');
 
-        if (title == "Nooch Mobile Refactor")
+        if (wideFlag == true)
+        {
+            $('#project-content').removeClass('col-md-8 col-md-offset-1').addClass('col-md-9');
+            $('#project-sidebar').removeClass('p-r-5')
+        }
+        else
+        {
+            $('#project-content').removeClass('col-md-9').addClass('col-md-8 col-md-offset-1');
+            $('#project-sidebar').addClass('p-r-5')
+        }
+
+        if (title == "Nooch Mobile Refactor" || "Native iOS App")
             imgFlag = " class='limit-height'";
 
         slides = elem.find('.project-description').data('images').split(',');
@@ -367,7 +379,7 @@ $(document).ready(function () {
         for (var i = 0; i < slides.length; ++i)
         {
             if (slides[i].indexOf('youtube.com') > -1) // Videos
-                slidesHtml = '<iframe width="750" height="422" src="' + slides[i] + '" frameborder="0" allowfullscreen></iframe>';
+                slidesHtml = '<li><iframe width="750" height="422" src="https://www.' + slides[i] + '" frameborder="0" allowfullscreen></iframe></li>';
             else // Images
                 slidesHtml = slidesHtml + '<li><img src=' + slides[i] + imgFlag + ' alt=""></li>';
         }
@@ -428,9 +440,11 @@ $(document).ready(function () {
                     nextText: '<i class="fa fa-angle-right"></i>',
                     slideshowSpeed: 4000,
                     animation: 'slide',
-                    controlNav: false,
-                    pauseOnAction: false,
+                    //controlNav: false,
+                    //pauseOnAction: false,
                     pauseOnHover: true,
+                    video: true,
+                    smoothHeight: true,
                     start: function () {
                         $('#project-modal .screen')
 						.addClass('done')
