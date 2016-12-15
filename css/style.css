@@ -423,7 +423,7 @@ p, p * {
 
 .jumbotron h1,
 .jumbotron p {
-    text-shadow: 0 4px 1px rgba(0,0,0,.2);
+    text-shadow: 0 3px 0 rgba(0,0,0,.2);
 }
 
 .img-wrapper .on-hover {
@@ -1243,7 +1243,7 @@ img.limit-height {
     }
 
     .jumbotron h1 {
-        text-shadow: 0 5px 0 rgba(0,0,0,.18);
+        text-shadow: 0 4px 0 rgba(0,0,0,.25);
     }
 
     .chart {
