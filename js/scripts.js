@@ -376,10 +376,15 @@ $(document).ready(function () {
 
         slides = elem.find('.project-description').data('images').split(',');
 
+        var hasVideo = false;
+
         for (var i = 0; i < slides.length; ++i)
         {
             if (slides[i].indexOf('youtube.com') > -1) // Videos
+            {
                 slidesHtml = '<li><iframe width="750" height="422" src="https://www.' + slides[i] + '" frameborder="0" allowfullscreen></iframe></li>';
+                hasVideo = true;
+            }
             else // Images
                 slidesHtml = slidesHtml + '<li><img src=' + slides[i] + imgFlag + ' alt=""></li>';
         }
@@ -435,6 +440,7 @@ $(document).ready(function () {
                 $(this).find('#sdbr-descr').hide();
 
             setTimeout(function () {
+
                 $('.screen.flexslider').flexslider({
                     prevText: '<i class="fa fa-angle-left"></i>',
                     nextText: '<i class="fa fa-angle-right"></i>',
@@ -444,6 +450,7 @@ $(document).ready(function () {
                     //pauseOnAction: false,
                     pauseOnHover: true,
                     video: true,
+                    useCSS: false,
                     smoothHeight: true,
                     start: function () {
                         $('#project-modal .screen')

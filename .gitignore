@@ -4,5 +4,5 @@
 *.ppt
 *.pptx
 *.psd
-
+!assets/cliff-canan-resume.pdf
 assets/videos/

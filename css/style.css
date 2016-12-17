@@ -912,8 +912,13 @@ img#bootstrap {
         }
 
 #project-content h3 {
+    color: rgb(130,128,129);
     margin-bottom: 15px;
 }
+
+    #project-content h3:not(:first-child) {
+        margin-top: 30px;
+    }
 
 #project-content h4 {
     margin-top: 25px;
@@ -930,6 +935,11 @@ img#bootstrap {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 5px;
+}
+
+#project-content iframe {
+    display: block;
+    margin: 15px auto;
 }
 
 #project-content ul {
@@ -1250,6 +1260,11 @@ img.limit-height {
         border: 3px solid #fff;
         padding: 8px;
         margin-top: -3px;
+    }
+
+    #main-nav.scrolled #logo {
+        border: none;
+        padding: 6px;
     }
 
     .img-wrapper img {
