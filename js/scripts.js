@@ -371,7 +371,7 @@ $(document).ready(function () {
             $('#project-sidebar').addClass('p-r-5')
         }
 
-        if (title == "Nooch Mobile Refactor" || "Native iOS App")
+        if (title == "Nooch Mobile Refactor" || title == "Native iOS App")
             imgFlag = " class='limit-height'";
 
         slides = elem.find('.project-description').data('images').split(',');
