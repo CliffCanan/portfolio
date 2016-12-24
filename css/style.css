@@ -879,6 +879,9 @@ img#bootstrap {
 #sdbr-link {
     padding-left: 30px;
     text-indent: -15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
     #sdbr-link:before {
