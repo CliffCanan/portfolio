@@ -170,6 +170,10 @@ $(document).ready(function () {
         $('#home .text-col h1, #home .text-col p').addClass('in');
     }
 
+
+    var isMobileScrn = $(window).width() < 768 ? true : false;
+
+
     /* Skills Functions */
     var color = $('#home').css('backgroundColor');
     var defaultColor = color;
@@ -371,7 +375,7 @@ $(document).ready(function () {
             $('#project-sidebar').addClass('p-r-5')
         }
 
-        if (title == "Nooch Mobile Refactor" || title == "Native iOS App")
+        if (title == "Nooch Mobile Refactor")
             imgFlag = " class='limit-height'";
 
         slides = elem.find('.project-description').data('images').split(',');
@@ -386,7 +390,12 @@ $(document).ready(function () {
                 hasVideo = true;
             }
             else // Images
+            {
+                if (!isMobileScrn && title == "Native iOS App")
+                    slides[i] = slides[i].substring(0, slides[i].indexOf('.png')) + '-2x.png';
+
                 slidesHtml = slidesHtml + '<li><img src=' + slides[i] + imgFlag + ' alt=""></li>';
+            }
         }
 
         slidesHtml = slidesHtml + '</ul>';

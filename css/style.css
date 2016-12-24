@@ -684,6 +684,16 @@ img#bootstrap {
     max-width: 60%;
 }
 
+#about .fa-graduation-cap {
+    font-size: 90%;
+    margin-right: 6px;
+}
+
+.cta-btn-wrap a {
+    margin: 10px auto;
+    max-width: 290px;
+    width: 100%;
+}
 
 /*** WORKS / PORTFOLIO  ***/
 #filter-works ul li a {
@@ -958,10 +968,6 @@ img#bootstrap {
     padding: 0 2px;
 }
 
-iframe + .video-caption {
-    margin-top: -20px;
-}
-
 img.limit-height {
     width: 60% !important;
     margin: 5px auto 0;
@@ -1206,7 +1212,22 @@ img.limit-height {
     }
 
 
+@media (max-width: 500px) {
+
+    #filter-works ul li {
+        width: 100%;
+    }
+}
+
 @media (max-width: 767px) {
+    .hide-sm {
+        display: none;
+    }
+
+    .break-sm {
+        display: block;
+        clear: both;
+    }
 
     #skills .nav-tabs.nav-justified > li {
         display: inline-block;
@@ -1224,6 +1245,15 @@ img.limit-height {
 
     #contact .contact-info {
         text-align: center;
+    }
+
+
+    .cta-btn-wrap {
+        text-align: center;
+    }
+
+    #project-content iframe {
+        max-width: 100%;
     }
 }
 
@@ -1252,6 +1282,17 @@ img.limit-height {
             display: inline;
             left: 190px;
         }
+
+
+    #about .fa-graduation-cap {
+        font-size: 96%;
+        margin-right: 14px;
+    }
+
+
+    .cta-btn-wrap a:first-child {
+        margin-right: 20px;
+    }
 }
 
 
@@ -1337,6 +1378,11 @@ img.limit-height {
 
     #project-content iframe {
         margin: 30px auto;
+    }
+
+
+    iframe + .video-caption {
+        margin-top: -20px;
     }
 
     #carousel div {
