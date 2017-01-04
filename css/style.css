@@ -714,11 +714,13 @@ img#bootstrap {
 }
 
     .companies .logo-wrap img {
-        max-height: 85%;
+        max-height: 56px;
+        margin-left: 2px;
     }
 
         .companies .logo-wrap img.rs-logo {
-            max-height: 90%;
+            max-height: 62px;
+            margin-left: -5px;
         }
 
 .companies h3 {
