@@ -121,10 +121,10 @@ $(document).ready(function () {
     );
 
     $("#text-scroll").typed({
-        strings: [" \"sweat-the-details\" product manager", " fintech entrepreneur", " obsessive front-end developer", " perpetual learner", " mobile payments aficionado", " self-taught coder", " hardened Philadelphia sports fan", " front-end developer", " resilient, scrappy startup vet", " web/mobile app developer", "lways asking \"why?\"", " surprisingly good ping-pong player"],
-        typeSpeed: 16,
-        backSpeed: 5, // backspacing speed
-        backDelay: 2300, // time before backspacing
+        strings: [" \"sweat-the-details\" product manager", " fintech entrepreneur", " front-end developer", " perpetual learner", " mobile payments aficionado", " self-taught coder", " hardened Philadelphia sports fan", " front-end developer", " resilient, scrappy startup vet", " web/mobile app developer", "lways asking \"why?\"", " surprisingly good ping-pong player"],
+        typeSpeed: 6,
+        backSpeed: 4, // backspacing speed
+        backDelay: 2400, // time before backspacing
         loop: true,
         loopCount: 3, // false = infinite
     });
