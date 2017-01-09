@@ -144,10 +144,8 @@ $(document).ready(function () {
 
     /*  Header Functions  */
     $('.imac-screen').flexslider({
-        //prevText: '<i class="fa fa-angle-left"></i>',
-        //nextText: '<i class="fa fa-angle-right"></i>',
         animation: 'slide',
-        slideshowSpeed: 4500,
+        slideshowSpeed: 5500,
         useCSS: true,
         controlNav: false,
         directionNav: false,
